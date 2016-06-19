@@ -12,5 +12,3 @@ On Windows:
 2) Compile with javac -cp .;jsoup-1.9.2.jar StackExchangeRead.java WriteToHTMLFile.java
 3) Run with java -cp .;$PATH_TO_FOLDER/jsoup-1.9.2.jar;$PATH_TO_FOLDER StackExchangeRead
 
-17-06-2016
-Madhav Kandukuri
