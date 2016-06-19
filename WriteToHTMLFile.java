@@ -15,6 +15,7 @@ public class WriteToHTMLFile {
     public void clearFile() {
         try{
             String dirName = pwd+"/html/";
+            new File(dirName).mkdirs();
             File dir = new File (dirName);
             File actualFile = new File (dir, filename);
             FileWriter fw = new FileWriter(actualFile, false);
