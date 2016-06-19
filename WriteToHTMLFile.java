@@ -7,14 +7,14 @@ public class WriteToHTMLFile {
 
     String filename;
     String linetext;
-    String home = System.getProperty("user.home");
+    String pwd = System.getProperty("user.dir");
     public WriteToHTMLFile(String filename) {
         this.filename = filename;
     }
 
     public void clearFile() {
         try{
-            String dirName = home+"/stackexchange/html/";
+            String dirName = pwd+"/html/";
             File dir = new File (dirName);
             File actualFile = new File (dir, filename);
             FileWriter fw = new FileWriter(actualFile, false);
@@ -30,7 +30,7 @@ public class WriteToHTMLFile {
 
     public void insertLine(String linetext) {
         try{
-            String dirName = home+"/stackexchange/html/";
+            String dirName = pwd+"/html/";
             File dir = new File (dirName);
             File actualFile = new File (dir, filename);
             FileWriter fw = new FileWriter(actualFile, true);
