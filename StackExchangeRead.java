@@ -32,10 +32,12 @@ public class StackExchangeRead {
             System.out.print("Enter URL: ");
             url = sc.next();
 
-            Document doc = Jsoup.connect(url).get();
+            Document doc = Jsoup.connect(url).userAgent("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0").get();
+            System.out.println("Connection established");
             String title = doc.title();
 
             WriteToHTMLFile hf = new WriteToHTMLFile(title.replace("/"," ")+".html");
+            System.out.println("File opened");
             DownloadImages di = new DownloadImages();
 
             hf.clearFile();
